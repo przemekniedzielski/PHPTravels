@@ -4,8 +4,9 @@ using OpenQA.Selenium;
 
 namespace Framework.Pages
 {
-    public class HomePage : Settings
+    public class HomePage
     {
+        private static readonly IWebDriver driver;
         //Elements
         private readonly static string logo = "//div[@class='header-top']//div[contains(@class, 'col-md-4 col-2 o2')]//img";
 

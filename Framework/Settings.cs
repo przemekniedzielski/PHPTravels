@@ -10,7 +10,7 @@ namespace Framework
 
         protected static string url = "https://www.phptravels.net/";
 
-        protected static int waitTime = 10;
+        public static int waitTime = 10;
 
         [SetUp]
         public void SetUp()

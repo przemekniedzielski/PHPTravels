@@ -4,8 +4,9 @@ using OpenQA.Selenium;
 
 namespace Framework.Pages
 {
-    public class AboutUsPage : Settings
+    public class AboutUsPage
     {
+        private static readonly IWebDriver driver;
         //Elements
         private readonly static string aboutUsPageTitle = "//div[@class='container']//a[@class='collapse-link']";
 

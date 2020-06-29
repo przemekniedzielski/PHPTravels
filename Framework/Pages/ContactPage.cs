@@ -4,8 +4,9 @@ using OpenQA.Selenium;
 
 namespace Framework.Pages
 {
-    public class ContactPage : Settings
+    public class ContactPage
     {
+        private static readonly IWebDriver driver;
         //Elements
         private readonly static string contactPageTitle = "//div[@class='container']//h2";
 
