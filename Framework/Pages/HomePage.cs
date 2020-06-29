@@ -1,7 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using static Framework.Helpers.WaitHelper;
 
 namespace Framework.Pages
 {
@@ -13,20 +12,18 @@ namespace Framework.Pages
         //Methods
 
         //Assertions
-        public static void CheckIfLogoIsDisplayed()
+        public static void CheckIfHomePageIsDisplayed()
         {
-            Wait();
-            IWebElement element = driver.FindElement(By.XPath(logo));
             try
             {
+                IWebElement element = driver.FindElement(By.XPath(logo));
                 Assert.IsTrue(element.Displayed);
-                Console.WriteLine("Logo is displayed correctly.");
+                Console.WriteLine("Home page is displayed correctly.");
             }
             catch (Exception)
             {
-                Console.WriteLine("Something went wrong. Logo is not displayed correctly.");
+                Console.WriteLine("Something went wrong. Home page is not displayed correctly.");
             }
         }
-
     }
 }

@@ -8,7 +8,9 @@ namespace Framework
     {
         protected static IWebDriver driver { get; set; }
 
-        public static string url = "https://www.phptravels.net/";
+        protected static string url = "https://www.phptravels.net/";
+
+        protected static int waitTime = 10;
 
         [SetUp]
         public void SetUp()
