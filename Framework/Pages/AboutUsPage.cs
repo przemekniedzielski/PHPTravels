@@ -4,9 +4,8 @@ using OpenQA.Selenium;
 
 namespace Framework.Pages
 {
-    public class AboutUsPage
+    public class AboutUsPage : Settings
     {
-        private static readonly IWebDriver driver;
         //Elements
         private readonly static string aboutUsPageTitle = "//div[@class='container']//a[@class='collapse-link']";
 
@@ -19,11 +18,11 @@ namespace Framework.Pages
             {
                 IWebElement element = driver.FindElement(By.XPath(aboutUsPageTitle));
                 Assert.IsTrue(element.Displayed);
-                Console.WriteLine("Contact page is displayed correctly.");
+                Console.WriteLine("'About Us' page is displayed correctly.");
             }
             catch (Exception)
             {
-                Console.WriteLine("Something went wrong. Contact page is not displayed correctly.");
+                Console.WriteLine("Something went wrong. 'About Us' page is not displayed correctly.");
             }
         }
     }

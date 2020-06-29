@@ -10,7 +10,7 @@ namespace Tests
     public class BaseTests : Settings
     {
         [Test]
-        public void CheckIfPageIsDisplayedCorrectlyTest()
+        public void CheckIfHomePageIsDisplayedCorrectlyTest()
         {
             CheckIfHomePageIsDisplayed();
         }

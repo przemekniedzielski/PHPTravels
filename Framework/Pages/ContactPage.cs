@@ -4,9 +4,8 @@ using OpenQA.Selenium;
 
 namespace Framework.Pages
 {
-    public class ContactPage
+    public class ContactPage : Settings
     {
-        private static readonly IWebDriver driver;
         //Elements
         private readonly static string contactPageTitle = "//div[@class='container']//h2";
 
@@ -19,11 +18,11 @@ namespace Framework.Pages
             {
                 IWebElement element = driver.FindElement(By.XPath(contactPageTitle));
                 Assert.IsTrue(element.Displayed);
-                Console.WriteLine("Contact page is displayed correctly.");
+                Console.WriteLine("'Contact' page is displayed correctly.");
             }
             catch (Exception)
             {
-                Console.WriteLine("Something went wrong. Contact page is not displayed correctly.");
+                Console.WriteLine("Something went wrong. 'Contact' page is not displayed correctly.");
             }
         }
     }
