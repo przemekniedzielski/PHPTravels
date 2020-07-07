@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using Framework.Helpers;
 
 namespace Framework.Pages
 {
@@ -14,6 +15,7 @@ namespace Framework.Pages
         //Assertions
         public static void CheckIfHomePageIsDisplayed()
         {
+            WaitHelper.EnableImplicitWait();
             try
             {
                 IWebElement element = driver.FindElement(By.XPath(logo));
@@ -23,6 +25,7 @@ namespace Framework.Pages
             catch (Exception)
             {
                 Console.WriteLine("Something went wrong. 'Home' page is not displayed correctly.");
+                throw;
             }
         }
     }

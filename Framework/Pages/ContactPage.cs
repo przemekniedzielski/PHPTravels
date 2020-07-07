@@ -23,6 +23,7 @@ namespace Framework.Pages
             catch (Exception)
             {
                 Console.WriteLine("Something went wrong. 'Contact' page is not displayed correctly.");
+                throw;
             }
         }
     }

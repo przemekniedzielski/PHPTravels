@@ -1,20 +1,20 @@
-﻿using OpenQA.Selenium;
-using System;
+﻿using System;
 
 namespace Framework.Helpers
 {
-    public class WaitHelper
+    public class WaitHelper : Settings
     {
-        public static void WaitUntilElementIsDisplayed(IWebElement element)
+        public static void EnableImplicitWait()
         {
-            int i = 0;
-            while (!element.Displayed)
+            try
             {
-                System.Threading.Thread.Sleep(1000);
-                i++;
-
-                if (i == Settings.waitTime)
-                    throw new Exception($"Something went wrong. Element '{element}' is not displayed correctly");
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(waitTime);
+                Console.WriteLine("Implicit Wait was enabled.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong.");
+                throw;
             }
         }
     }

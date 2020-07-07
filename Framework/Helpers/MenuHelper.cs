@@ -20,16 +20,16 @@ namespace Framework.Helpers
 
         public static void GoToContactPage()
         {
+            EnableImplicitWait();
             driver.FindElement(By.XPath(companyButton)).Click();
-            WaitUntilElementIsDisplayed(driver.FindElement(By.XPath(contactButton)));
             driver.FindElement(By.XPath(contactButton)).Click();
             Console.WriteLine("Clicked 'Contact' button.");
         }
 
         public static void GoToAboutUsPage()
         {
+            EnableImplicitWait();
             driver.FindElement(By.XPath(companyButton)).Click();
-            WaitUntilElementIsDisplayed(driver.FindElement(By.XPath(aboutUsButton)));
             driver.FindElement(By.XPath(aboutUsButton)).Click();
             Console.WriteLine("Clicked 'About Us' button.");
         }
