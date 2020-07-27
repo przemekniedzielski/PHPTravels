@@ -1,16 +1,15 @@
 ﻿using OpenQA.Selenium;
 using System;
-using static Framework.Helpers.WaitHelper;
 
 namespace Framework.Helpers
 {
     public class MenuHelper : Settings
     {
-        private readonly static string homeButton = "//div[@class='navbar-wrapper']//a[contains(@title, 'home')]";
-        private readonly static string companyButton = "//div[@class='navbar-wrapper']//a[contains(text(), 'company')]";
-        private readonly static string contactButton = "//div[@class='navbar-wrapper']//a[contains(text(), 'company')]//following-sibling::ul//a[contains(text(), 'Contact')]";
-        private readonly static string aboutUsButton = "//div[@class='navbar-wrapper']//a[contains(text(), 'company')]//following-sibling::ul//a[contains(text(), 'About Us')]";
-
+        public readonly static string homeButton = "//div[@class='navbar-wrapper']//a[contains(@title, 'home')]";
+        public readonly static string visaButton = "//div[@class='navbar-wrapper']//a[contains(text(), 'Visa')]";
+        public readonly static string companyButton = "//div[@class='navbar-wrapper']//a[contains(text(), 'company')]";
+        public readonly static string contactButton = "//div[@class='navbar-wrapper']//a[contains(text(), 'company')]//following-sibling::ul//a[contains(text(), 'Contact')]";
+        public readonly static string aboutUsButton = "//div[@class='navbar-wrapper']//a[contains(text(), 'company')]//following-sibling::ul//a[contains(text(), 'About Us')]";
 
         public static void GoToHomePage()
         {
@@ -20,7 +19,6 @@ namespace Framework.Helpers
 
         public static void GoToContactPage()
         {
-            EnableImplicitWait();
             driver.FindElement(By.XPath(companyButton)).Click();
             driver.FindElement(By.XPath(contactButton)).Click();
             Console.WriteLine("Clicked 'Contact' button.");
@@ -28,7 +26,6 @@ namespace Framework.Helpers
 
         public static void GoToAboutUsPage()
         {
-            EnableImplicitWait();
             driver.FindElement(By.XPath(companyButton)).Click();
             driver.FindElement(By.XPath(aboutUsButton)).Click();
             Console.WriteLine("Clicked 'About Us' button.");

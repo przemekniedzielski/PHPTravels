@@ -16,8 +16,7 @@ namespace Framework.Pages
         {
             try
             {
-                IWebElement element = driver.FindElement(By.XPath(aboutUsPageTitle));
-                Assert.IsTrue(element.Displayed);
+                Assert.IsTrue(driver.FindElement(By.XPath(aboutUsPageTitle)).Displayed);
                 Console.WriteLine("'About Us' page is displayed correctly.");
             }
             catch (Exception)

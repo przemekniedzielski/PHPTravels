@@ -10,9 +10,12 @@ namespace Tests
     public class BaseTests : Settings
     {
         [Test]
-        public void CheckIfHomePageIsDisplayedCorrectlyTest()
+        public void CheckIfBaseElementsAreDisplayedCorrectlyTest()
         {
-            CheckIfHomePageIsDisplayed();
+            CheckIfLogoIsDisplayed();
+            CheckIfMainMenuOptionsAreDisplayed();
+            CheckIfChangeCurrencyButtonIsDisplayed();
+            CheckIfChangeLanguageButtonIsDisplayed();
         }
 
         [Test]
@@ -21,6 +24,7 @@ namespace Tests
             GoToContactPage();
             CheckIfContactPageIsDisplayed();
         }
+
         [Test]
         public void CheckIfAboutUsPageIsDisplayedCorrectlyTest()
         {

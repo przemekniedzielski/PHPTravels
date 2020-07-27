@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 
 namespace Framework
 {
@@ -10,14 +11,13 @@ namespace Framework
 
         protected static string url = "https://www.phptravels.net/";
 
-        public static int waitTime = 10;
-
         [SetUp]
         public void SetUp()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(url);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
         }
 
         [TearDown]

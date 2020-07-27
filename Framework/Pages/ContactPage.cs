@@ -16,8 +16,7 @@ namespace Framework.Pages
         {
             try
             {
-                IWebElement element = driver.FindElement(By.XPath(contactPageTitle));
-                Assert.IsTrue(element.Displayed);
+                Assert.IsTrue(driver.FindElement(By.XPath(contactPageTitle)).Displayed);
                 Console.WriteLine("'Contact' page is displayed correctly.");
             }
             catch (Exception)

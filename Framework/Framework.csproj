@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\MenuHelper.cs" />
-    <Compile Include="Helpers\WaitHelper.cs" />
     <Compile Include="Pages\AboutUsPage.cs" />
     <Compile Include="Pages\ContactPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
